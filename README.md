@@ -1,121 +1,136 @@
-MediaPress Console CMS
+BlogCMS Console - MediaPress International
 📋 Project Overview
+Project Name: BlogCMS Console
 Client: MediaPress International
 Agency: CodeCrafters Digital
-Project: Console-based Blog CMS
-Developer: Junior Backend Developer
-Duration: 5 days
+Role: Junior Backend Developer
+Project Duration: 5 days
+Delivery Mode: Individual work
 
 🎯 Project Context
-MediaPress International requires a command-line Content Management System for their corporate blog to:
+MediaPress International, a major media corporation, requires a command-line Content Management System (CMS) for their corporate blog. The tool is designed for:
 
-Manage content internally without web interface
+Internal management of blog content without web interface
 
-Train editors in content organization concepts
+Training content editors on content organization concepts
 
-Easily backup and restore article structure
+Easy backup and restoration of article structures
 
-Operate in secure environments without web exposure
+Secure operation in environments without web exposure
 
-🚀 First Deliverable (Day 1)
-This repository contains the initial planning and documentation for the Console CMS project.
+⚙️ Technical Constraints
+Environment: PHP 8 servers
 
-📊 Current Status
-✅ Project setup and initialization
+Security: Terminal-only access, no web exposure
 
-✅ Use Case diagram creation
+Performance: Must handle 10,000+ articles
 
-✅ Initial documentation structure
+Portability: Pure PHP code, no specific extensions required
 
-✅ Repository organization
+📊 Evaluation Structure
+Formative Evaluation (Daily)
+End-of-day checkpoints (15 minutes)
 
-📁 Repository Structure
+Peer code reviews
+
+Self-assessment using competency grid
+
+Summative Evaluation (Final - Day 5)
+Source Code (50%): Functionality + quality
+
+UML Diagrams (20%): Use Cases + Class diagrams
+
+Presentation (20%): Demo + Q&A
+
+Documentation (10%): README + code comments
+
+Performance Levels
+Bronze (50%): Functional code with minimum 3 classes
+
+Silver (75%): All business rules implemented
+
+Gold (90%+): Intuitive interface + complete tests + documented code
+
+📦 Deliverables Schedule
+Deliverable 1 - Day 1
 text
-mediapress-console-cms/
-├── docs/
-│ ├── use-cases/
-│ │ └── use-case-diagram.png # UML Use Case Diagram
-│ └── planning/
-│ └── project-plan.md # Initial project planning
-├── src/ # (Will contain source code)
-├── tests/ # (Will contain test files)
-└── README.md # This file
-🎨 Use Cases Implemented
-The system will support the following user stories:
+├── Planning link (Trello/Notion/Jira)
+└── GitHub repository containing:
+├── Use Case Diagram
+└── Initial README.md (this file)
+Deliverable 2 - Day 2
+text
+├── Updated planning link
+└── GitHub repository containing:
+├── Use Case Diagram
+├── Class Diagram
+└── Initial README.md
+Deliverable 3 - Day 3
+text
+├── Final planning link
+└── GitHub repository containing:
+├── Use Case Diagram
+├── Class Diagram
+├── Initial source code
+└── Initial README.md
+Final Deliverable - Day 5
+text
+├── Final planning link
+└── GitHub repository containing:
+├── Use Case Diagram
+├── Class Diagram
+├── Complete functional source code
+├── Demonstration script with real use cases
+├── Technical documentation and user guide
+└── README.md
+📅 Evaluation Timeline
+Day 5 Morning: Validation tests
 
-Article Management
+Day 5 Afternoon: Presentations (15 minutes each)
 
-Create new blog articles
+Day 5 End of Day: Retrospective + feedback
 
-Edit existing articles
+⚠️ Important Notes
+Daily submission required via Maghreb-Simplonline with professional, concise message
 
-Delete articles
+All requested links must be included in each submission
 
-List all articles
+Delays or omissions may result in penalties or project invalidation
 
-Category Management
+All deliverables must be submitted again on each delivery day
 
-Create content categories
+🏆 Evaluation Criteria
+Functionality (40%): Implementation of use cases
 
-Assign articles to categories
+OO Quality (30%): Inheritance, encapsulation, typing
 
-Manage category hierarchy
+Clean Code (20%): Structure, readability, documentation
 
-Backup & Restore
+Project Management (10%): Git usage, deadline respect, teamwork
 
-Export article database
+🔧 Technical Requirements
+PHP 8.0 or higher
 
-Import from backup
+Command-line interface access
 
-Migration support
+File system write permissions for data storage
 
-User Management
+No database required (file-based storage)
 
-Admin authentication (CLI-based)
+👥 Target Users
+System administrators at MediaPress International
 
-User role management
+Content editors in training
 
-Session handling
+Technical staff managing blog infrastructure
 
-🛠 Technical Stack
-Language: PHP 8.0+
+📈 Project Goals
+Create a secure, terminal-based CMS
 
-Environment: Console/Terminal only
+Implement core blogging functionality
 
-Storage: File-based or SQLite (TBD)
+Ensure scalability for large article counts
 
-Dependencies: Pure PHP, no external extensions required
+Provide intuitive command-line interface
 
-Performance: Optimized for 10,000+ articles
-
-📅 Project Timeline
-Day 1: Planning & Architecture (Current)
-Day 2: Core Class Structure
-Day 3: Basic Functionality Implementation
-Day 4: Advanced Features & Testing
-Day 5: Validation & Documentation
-
-📝 Next Steps
-For the next deliverable (Day 2), we will provide:
-
-Updated planning documentation
-
-Complete UML Class Diagram
-
-Initial code structure
-
-Enhanced README with setup instructions
-
-🔗 Resources
-Project Planning: [https://trello.com/b/R0ieUW73/mediapress-console-cms]
-
-Client Requirements: [https://docs.google.com/document/d/1nXdvJFVpDfDGLHq62eqd4jDttZmvSlNhpTINsVZzw_Y/edit?tab=t.0#heading=h.ym9m6n50hqya]
-
-👥 Team & Contact
-Developer: [Mohammed Mehdi Saibat]
-Agency: CodeCrafters Digital
-Supervisor: [Mohammed Yassine Bahajou]
-Email: [mohammedmehdisaibat@gmail.com]
-
-📄 License
-Proprietary - MediaPress International © 2024
+Include comprehensive documentation
