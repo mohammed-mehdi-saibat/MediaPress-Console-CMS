@@ -1,136 +1,86 @@
 BlogCMS Console - MediaPress International
-📋 Project Overview
-Project Name: BlogCMS Console
-Client: MediaPress International
-Agency: CodeCrafters Digital
-Role: Junior Backend Developer
-Project Duration: 5 days
-Delivery Mode: Individual work
+📋 Project Status - Day 3
+Current Phase: Initial Implementation
+Progress: Core architecture complete, development in progress
 
-🎯 Project Context
-MediaPress International, a major media corporation, requires a command-line Content Management System (CMS) for their corporate blog. The tool is designed for:
+🎯 Quick Overview
+Command-line CMS for secure blog management without web interface. Built for handling 10,000+ articles with file-based storage.
 
-Internal management of blog content without web interface
+✅ Completed Today
+✅ Use Case Diagram finalized
 
-Training content editors on content organization concepts
+✅ Class Diagram designed and implemented
 
-Easy backup and restoration of article structures
+✅ Core class structure established
 
-Secure operation in environments without web exposure
+🔄 Currently Implementing
+Article CRUD operations
 
-⚙️ Technical Constraints
-Environment: PHP 8 servers
+Category management system
 
-Security: Terminal-only access, no web exposure
+Command-line interface
 
-Performance: Must handle 10,000+ articles
+Data validation and persistence
 
-Portability: Pure PHP code, no specific extensions required
+📅 Upcoming Work (Days 4-5)
+Day 4 Focus:
 
-📊 Evaluation Structure
-Formative Evaluation (Daily)
-End-of-day checkpoints (15 minutes)
+Complete all business logic
 
-Peer code reviews
+Implement backup/restore features
 
-Self-assessment using competency grid
+Add search and filtering
 
-Summative Evaluation (Final - Day 5)
-Source Code (50%): Functionality + quality
+Begin testing
 
-UML Diagrams (20%): Use Cases + Class diagrams
+Day 5 Focus:
 
-Presentation (20%): Demo + Q&A
+Polish CLI interface
 
-Documentation (10%): README + code comments
+Finalize documentation
 
-Performance Levels
-Bronze (50%): Functional code with minimum 3 classes
+Create demo scripts
 
-Silver (75%): All business rules implemented
+Performance optimization
 
-Gold (90%+): Intuitive interface + complete tests + documented code
+🏗️ Architecture
+Four main classes handle core functionality:
 
-📦 Deliverables Schedule
-Deliverable 1 - Day 1
-text
-├── Planning link (Trello/Notion/Jira)
-└── GitHub repository containing:
-├── Use Case Diagram
-└── Initial README.md (this file)
-Deliverable 2 - Day 2
-text
-├── Updated planning link
-└── GitHub repository containing:
-├── Use Case Diagram
-├── Class Diagram
-└── Initial README.md
-Deliverable 3 - Day 3
-text
-├── Final planning link
-└── GitHub repository containing:
-├── Use Case Diagram
-├── Class Diagram
-├── Initial source code
-└── Initial README.md
-Final Deliverable - Day 5
-text
-├── Final planning link
-└── GitHub repository containing:
-├── Use Case Diagram
-├── Class Diagram
-├── Complete functional source code
-├── Demonstration script with real use cases
-├── Technical documentation and user guide
-└── README.md
-📅 Evaluation Timeline
-Day 5 Morning: Validation tests
+Article - Data model with validation
 
-Day 5 Afternoon: Presentations (15 minutes each)
+ArticleManager - CRUD operations and storage
 
-Day 5 End of Day: Retrospective + feedback
+CategoryManager - Organization system
 
-⚠️ Important Notes
-Daily submission required via Maghreb-Simplonline with professional, concise message
+BackupManager - Data protection
 
-All requested links must be included in each submission
+🚀 Getting Started
+bash
 
-Delays or omissions may result in penalties or project invalidation
+# Clone and run
 
-All deliverables must be submitted again on each delivery day
+git clone [https://github.com/mohammed-mehdi-saibat/MediaPress-Console-CMS]
+cd blogcms-console
+php index.php
+📊 Progress Summary
+Component Status % Complete
+Core Classes ✅ Done 100%
+File Storage ✅ Done 100%
+CRUD Operations 🔄 In Progress 60%
+CLI Interface 🔄 In Progress 50%
+Testing ⏳ Pending 0%
+🎯 Success Targets
+Bronze (50%) - Basic functionality with 3+ classes ✅
 
-🏆 Evaluation Criteria
-Functionality (40%): Implementation of use cases
+Silver (75%) - All business rules implemented (in progress)
 
-OO Quality (30%): Inheritance, encapsulation, typing
+Gold (90%+) - Intuitive interface + tests + documentation
 
-Clean Code (20%): Structure, readability, documentation
+⚠️ Current Notes
+Development on schedule
 
-Project Management (10%): Git usage, deadline respect, teamwork
+Meeting technical constraints
 
-🔧 Technical Requirements
-PHP 8.0 or higher
+File-based storage operational
 
-Command-line interface access
-
-File system write permissions for data storage
-
-No database required (file-based storage)
-
-👥 Target Users
-System administrators at MediaPress International
-
-Content editors in training
-
-Technical staff managing blog infrastructure
-
-📈 Project Goals
-Create a secure, terminal-based CMS
-
-Implement core blogging functionality
-
-Ensure scalability for large article counts
-
-Provide intuitive command-line interface
-
-Include comprehensive documentation
+Focused on CLI usability
