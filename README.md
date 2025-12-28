@@ -1,86 +1,235 @@
-BlogCMS Console - MediaPress International
-📋 Project Status - Day 3
-Current Phase: Initial Implementation
-Progress: Core architecture complete, development in progress
+📝 Blog CMS - Console Edition
+🎯 Project Overview
+A command-line Content Management System for blog management built with pure PHP OOP (no frameworks). A 5-day development project with personas, permissions matrix, business rules, and functional requirements.
 
-🎯 Quick Overview
-Command-line CMS for secure blog management without web interface. Built for handling 10,000+ articles with file-based storage.
+👥 Personas & Permissions
+Persona Role Permissions
+Amina Admin Full system control + user management
+Thomas Editor Manage all articles + categories + comments
+Léa Author Create/edit own articles only
+Marco Visitor Read-only access
+📋 Business Rules Implemented
+✅ RB-001: One role per user (Visitor, Author, Editor, Admin)
 
-✅ Completed Today
-✅ Use Case Diagram finalized
+✅ RB-005: Article belongs to one author (1:N relationship)
 
-✅ Class Diagram designed and implemented
+✅ RB-006: Article must have ≥1 category
 
-✅ Core class structure established
+✅ RB-007: Article can be in multiple categories
 
-🔄 Currently Implementing
-Article CRUD operations
+✅ RB-008: Only original author can edit/delete (exceptions: Editors/Admins)
 
-Category management system
+✅ RB-011: Article lifecycle: Draft → Published → Archived
 
-Command-line interface
+✅ RB-012: Publication date auto-sets on publish
 
-Data validation and persistence
+✅ RB-017: Unique email & username
 
-📅 Upcoming Work (Days 4-5)
-Day 4 Focus:
+✅ RB-018: Hashed passwords
 
-Complete all business logic
+✅ RB-019: Only Admins manage users
 
-Implement backup/restore features
+✅ RB-020: Cannot delete self
 
-Add search and filtering
+✅ RB-021: All entities need unique ID
 
-Begin testing
+✅ RB-022: Auto-created dates
 
-Day 5 Focus:
+🏗️ System Architecture
+text
+BlogCMS/
+├── User (Abstract Base Class)
+│ ├── Visitor (Read-only)
+│ ├── Author (Create/edit own articles)
+│ ├── Editor (Manage all content)
+│ └── Admin (Full system control)
+├── Article
+│ └── Comment (Nested under articles)
+└── Category
+🚀 Features
+🔐 Authentication System
+4 pre-defined demo accounts (one for each role)
 
-Polish CLI interface
+Role-based access control
 
-Finalize documentation
+Password hashing for security
 
-Create demo scripts
+📰 Article Management
+Create: Authors/Editors/Admins can create articles
 
-Performance optimization
+Edit: Authors (own), Editors/Admins (all)
 
-🏗️ Architecture
-Four main classes handle core functionality:
+Delete: Same permissions as edit
 
-Article - Data model with validation
+Publish/Archive: Change article status
 
-ArticleManager - CRUD operations and storage
+Search: Basic title/content search
 
-CategoryManager - Organization system
+Filter: By status, author, category, date
 
-BackupManager - Data protection
+💬 Comment System
+Add comments below articles
 
-🚀 Getting Started
+Moderation system: pending/approved/spam statuses
+
+Role-based visibility: Visitors see approved, Editors/Admins see all
+
+Full management: Edit, delete, change status of any comment
+
+🗂️ Category Management
+Create and assign categories to articles
+
+Articles require at least 1 category
+
+Category assignment during article creation
+
+👥 User Management (Admin Only)
+List all users with article counts
+
+Change user roles
+
+Delete users (with article handling options)
+
+🎮 How to Run
 bash
 
-# Clone and run
+# 1. Make sure you have PHP installed
 
-git clone [https://github.com/mohammed-mehdi-saibat/MediaPress-Console-CMS]
-cd blogcms-console
-php index.php
-📊 Progress Summary
-Component Status % Complete
-Core Classes ✅ Done 100%
-File Storage ✅ Done 100%
-CRUD Operations 🔄 In Progress 60%
-CLI Interface 🔄 In Progress 50%
-Testing ⏳ Pending 0%
-🎯 Success Targets
-Bronze (50%) - Basic functionality with 3+ classes ✅
+php --version
 
-Silver (75%) - All business rules implemented (in progress)
+# 2. Clone or download the project
 
-Gold (90%+) - Intuitive interface + tests + documentation
+# 3. Navigate to project directory
 
-⚠️ Current Notes
-Development on schedule
+cd blog-cms
 
-Meeting technical constraints
+# 4. Run the application
 
-File-based storage operational
+php CLI.php
+📝 Demo Login Credentials
+The system includes 4 pre-defined accounts:
 
-Focused on CLI usability
+Username Role Password Description
+marco Visitor pass123 Read-only access
+lea Author pass123 Can create/edit own articles
+thomas Editor pass123 Manage all content
+amina Admin pass123 Full system control
+🖥️ User Interface
+The system uses a clean CLI interface with role-specific menus:
+
+text
+=== ADMIN MENU ===
+User: amina
+
+---
+
+ARTICLES:
+
+1. List All Articles
+2. Search Articles
+3. Filter Articles
+4. Create New Article
+5. View/Edit My Articles
+
+COMMENTS: 6. View Articles with Comments 7. Manage Comments
+
+SYSTEM: 8. Manage Categories 9. Manage Users 0. Logout
+📊 Sample Data Included
+The system comes with sample data:
+
+4 users (one for each role)
+
+3 categories: Tech, Sports, Food
+
+1 published article with comments
+
+2 comments (one approved, one pending)
+
+🛠️ Technical Implementation
+OOP Principles Applied
+Inheritance: User → Author/Editor/Admin/Visitor
+
+Encapsulation: Private properties with getters/setters
+
+Polymorphism: Role-specific behavior through inheritance
+
+Composition: Articles have Categories and Comments
+
+Design Patterns
+Factory Pattern: User creation based on role
+
+Observer Pattern: Comment notification system (conceptual)
+
+Singleton Pattern: Single instance of BlogCMS
+
+Security Features
+Password hashing with password_hash()
+
+Input sanitization
+
+Role-based permission checks
+
+Session management in CLI
+
+📁 File Structure
+text
+blog-cms/
+├── mediapress.php # All class definitions
+├── CLI.php # Main application logic
+├── README.md # This file
+└── blog_data.json # Data persistence (if enabled)
+🔧 Extending the Project
+Easy Improvements
+Add file persistence - Save data between sessions
+
+Enhanced validation - Better input checking
+
+Export functionality - Export articles to PDF/HTML
+
+Statistics - View usage statistics
+
+Advanced Features
+Subcategories - Hierarchical category system
+
+Email notifications - Notify authors of comments
+
+Image upload - Add images to articles
+
+API endpoints - REST API for web integration
+
+🐛 Known Limitations
+Data is stored in memory (resets on restart)
+
+Basic input validation
+
+No pagination for large lists
+
+Simple CLI interface (no advanced formatting)
+
+📚 Learning Outcomes
+This project demonstrates:
+
+Object-Oriented Programming in PHP
+
+User authentication and authorization
+
+CLI application development
+
+Data modeling and relationships
+
+Business rule implementation
+
+Comment system architecture
+
+👨‍💻 Developer Notes
+"This project was built as a learning exercise to understand PHP OOP principles, user permission systems, and content management architecture. While it has limitations, it serves as a solid foundation for a fully-featured CMS."
+
+📄 License
+Educational Project - Free to use and modify
+
+🙏 Acknowledgments
+Built as part of a 5-day intensive PHP training
+
+Special thanks to the formateur for guidance
+
+Inspired by real-world blog platforms
